@@ -1,0 +1,117 @@
+/**************************General**************************/
+
+/*^^^^^^Background,Backgroud color, Page layout,size,margines,paddings & borders^^^^^*/
+header {padding-top: 6em;background-position: bottom;
+      background-image:
+       url(http://homepages.cs.ncl.ac.uk/harold.fellermann/csc8018/ocean_cleanup/resources/ocean.jpg);
+    background-attachment:fixed; background-size:cover;background-repeat: no-repeat;}
+/*(background position:bottom,attachment:fixed and size:cover, is on bottom to achieve a selected part of the iamge. */
+
+header h1 {margin: auto;}
+body {overflow-x: hidden;}
+/*(overflow-x : is disabled to turn off horizontal scrolling feature.*/
+main {width: 80ch;margin: auto;}
+/*(The main width selected to be 80ch,because we dont need to have more than approximately 80 character per line. And margin is auto because it was requested that the main section fits at the center of the page.*/
+blockquote {font-size:2em;margin: auto;text-align: center}
+.left + p {clear: right;}
+/*(to move the next paragraphs after the left class to the next block.)*/
+
+/*---nav---*/
+ul.subclass{display: none;}
+/*(As mention in the assignemt statement, the subclass ul does not need to be appeard.)*/
+nav {background-color:#02323270;margin-top: 10% ; text-align: center;}
+nav li{display:inline-block;padding-top:1%;padding-bottom:1%;padding-left: 4ch;padding-right: 4ch} /*(inline-block selected to change the display direction of "li" from vertical to horizontal.)*/
+nav li:hover{background-color:#d3e7e68c;}
+/*(To achieve a transparet background for each li when hovering.)*/
+
+/*---Tables---*/
+table {border-top: 2px solid black; border-bottom: 2px solid black; border-collapse:collapse; ; margin: auto;}
+td{border-bottom: 1px solid black; padding: 6px;}
+caption{font-weight: bold;border-top: 2px solid black;}
+
+/*---Figures,Images,iframes & figcaptions---*/
+
+/*--iframes--*/
+iframe {max-width:100%; height:calc((80ch * 9)/16) ;border: 1px solid #d6d6d6;border-radius: 3px}
+/*(height calculation related to achieve 16/9 ratio.)*/
+
+/*--figures & figcaptions--*/
+figure {border: 1px solid #d6d6d6;border-radius: 3px; box-shadow:10px 10px 20px #cecece; padding: 8px;}
+figcaption {text-align: right;color: #a2a2a2; margin-top: 15px;font-family:Special elite,serif ;}
+
+
+/*--Images--*/
+img {width: 100%;}
+/*(To fit images into the main width which equals 80ch. )*/
+
+/*---Footer---*/
+footer{padding-top: 1.5em;padding-bottom: 1.5em;
+    background-image: url(http://homepages.cs.ncl.ac.uk/harold.fellermann/csc8018/ocean_cleanup/resources/ocean.jpg);
+    background-attachment:fixed}
+/*(As same as the header,background-attachment is fixed to achieve selected part of the image on all resolutions. )*/
+
+/*^^^^^^Fonts, font sizes and font styles & font colors^^^^^*/
+header {font-family: Darker Grotesque, sans-serif}
+header h1{font-size:xx-large; text-align: center;; color: #ffffff;text-shadow:3px 3px 10px black;text-transform: uppercase}
+main {font-family:'EB Garamond', serif}
+nav a {color:#ffffff;font-weight:bold;}
+blockquote {color:#23a9ad;}
+a {text-decoration: none}
+footer a{color: black;}
+footer {font-family: Darker Grotesque, sans-serif; font-weight:bold;font-size:medium;text-align: center;}
+
+/**************************Specific**************************/
+#first {font-weight: 100;vertical-align:top;}
+/*(to resize and superscript the "THE" word span.)*/
+#second {font: 2em sans-serif;font-weight:200;}
+#third {font: 2em sans-serif;font-weight:600;}
+#Summary h2{display: none;}
+/*(As mentioned in the coursework statement, the Summary title should be invisible)*/
+#Summary figure {margin: 0px;border: none;box-shadow: none;}
+#Summary figcaption{visibility: hidden; text-align: center;}
+/*(to make it visible on mouse hover.)*/
+#Summary figure:hover figcaption {visibility:visible;}
+#History figure{width: 40%;}
+#Marine_Plastic_Debris figure {width: 50%;}
+#Marine_Plastic_Debris table {clear: left;}
+/*(To move the rest of the paragraph to the next block.)*/
+#Ocean_Cleanup figure{width: 40ch;margin-right: 25px;}
+#River_Interception img {width: 345px;}
+.left {float: left;transform: rotate(-3deg);margin-left: 10px;padding-left: 6px; padding-right: 6px;}
+.right { float: right;transform: rotate(3deg);padding: 10px;margin-right:15px;}
+
+/**************************Mobile phones and Tablets**************************/
+/*(Uner 800px resolutions these properties should apply.)*/
+@media screen and (max-width:800px){
+
+/**************************General**************************/
+
+/*--Page layout,margin,padding,border--*/
+header {margin: 0px;padding: 0px;border: 0px;}
+header h1{padding-top: 20%;padding-bottom: 20%;font-size:100%; }
+main{width: auto;padding: 3px;}
+
+
+/*--Figures,iframes & Images--*/
+figure {width: auto;padding:0px}
+.left , .right {float: none;margin:0px;padding-top: 5px;}
+iframe{width:100% ;}
+    
+/*--Navigation--*/
+nav li{width: 100%; display:block;margin: 0px; padding: 0px;text-align: center;padding-top: 15px;padding-bottom: 15px;}
+/*(Displat has set to block to achieve a vertical order.)*/
+nav ul{padding: 0px;width: 100%;}
+nav{margin-left: 0px;margin-right: 0px;max-width: none;}
+   
+/**************************Specific**************************/
+
+#History figure {width:auto;}
+#Marine_Plastic_Debris figure{width: auto;}
+#River_Interception img {width:100%;}
+#Ocean_Cleanup figure{width:95%;margin:auto}
+
+}
+
+
+
+
